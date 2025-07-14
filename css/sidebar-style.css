@@ -1,0 +1,390 @@
+/*--------------------------------------------------------------
+# Hidden Sidebar - "Glimpse of Hope" Creative Design
+--------------------------------------------------------------*/
+
+.hidden-sidebar {
+    background-color: #1a1a1a;
+    background-image: url('../images/main-slider/african-child-black-child-child-face.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden-sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.6));
+    z-index: 1;
+}
+
+.hidden-sidebar .sidebar-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE */
+}
+
+.hidden-sidebar .sidebar-content::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+
+.hidden-sidebar .logo {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.hidden-sidebar .logo img {
+    max-width: 150px;
+    opacity: 0.9;
+}
+
+.hidden-sidebar-close {
+    color: rgba(255,255,255,0.7);
+    transition: all 0.3s ease;
+}
+
+.hidden-sidebar-close:hover {
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+.sidebar-inner-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.sidebar-header .title {
+    font-family: 'Prata', serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.sidebar-header .quote {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.8);
+    font-style: italic;
+    max-width: 300px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Stories of Change */
+.stories-of-change {
+    margin-bottom: 40px;
+    flex-grow: 1;
+    animation: fadeInUp 0.8s ease-out 0.2s;
+    animation-fill-mode: both;
+}
+
+.stories-title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--theme-color-two);
+    display: inline-block;
+}
+
+.story-card-wrapper {
+    display: grid;
+    gap: 20px;
+}
+
+.story-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.story-card-image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.story-card:hover .story-card-image {
+    transform: scale(1.1);
+}
+
+.story-card-content {
+    padding: 15px 20px;
+}
+
+.story-card-content h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 5px;
+    color: #fff;
+}
+
+.story-card-content p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeInUp 0.8s ease-out 0.4s;
+    animation-fill-mode: both;
+}
+
+.action-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.action-icon {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.action-icon i {
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.action-icon span {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-weight: 500;
+}
+
+.action-icon:hover i {
+    background: var(--theme-color-two);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.action-icon:hover span {
+    opacity: 1;
+}
+
+.social-links-sidebar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links-sidebar a {
+    color: rgba(255,255,255,0.6);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.social-links-sidebar a:hover {
+    color: var(--theme-color-two);
+    transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hidden Sidebar Content */
+.hidden-sidebar .content {
+    padding-top: 20px;
+}
+
+.hidden-sidebar .sidebar-widget {
+    margin-bottom: 30px;
+}
+
+.hidden-sidebar .widget-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.hidden-sidebar .widget-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--theme-color-two);
+}
+
+
+/* Impact Widget */
+.impact-widget .impact-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.impact-widget .stat-item {
+    text-align: left;
+}
+
+.impact-widget .stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--theme-color-three);
+    line-height: 1;
+}
+
+.impact-widget .stat-label {
+    font-size: 16px;
+    color: #858585;
+    margin-top: 5px;
+}
+
+
+/* Action Widget */
+.action-widget .action-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.action-widget .action-links li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.action-widget .action-links li a i {
+    margin-right: 10px;
+}
+
+
+/* Contact Widget */
+.contact-widget-two .contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.contact-widget-two .contact-info li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-widget-two .contact-info li i {
+    margin-right: 15px;
+    color: var(--theme-color-two);
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+.contact-widget-two .contact-info li a {
+    color: #858585;
+    transition: all 300ms ease;
+}
+
+.contact-widget-two .contact-info li a:hover {
+    color: var(--theme-color-two);
+}
+
+.contact-widget-two .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.contact-widget-two .social-links li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: var(--dark-color);
+    font-size: 16px;
+    transition: all 300ms ease;
+}
+
+.contact-widget-two .social-links li a:hover {
+    background-color: var(--theme-color-two);
+    color: #fff;
+} 
