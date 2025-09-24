@@ -7896,6 +7896,7 @@ img {
 	background: #ffffff;
 	position: relative;
 	max-width: 770px;
+	border-radius: 0.8rem;
 	margin: 0 auto;
 	max-height: 100%;
 }
@@ -18099,9 +18100,9 @@ img {
 	color: var(--theme-color-two);
 }
 
-.link-widget-two ul li a:before {
+.social-widget-two ul li a:before {
 	position: absolute;
-	content: "\f192";
+	content: ".";
 	font-size: 14px;
 	font-family: FOntAwesome;
 	left: 0;
@@ -18109,7 +18110,7 @@ img {
 	-webkit-transition: .5s ease;
 	-o-transition: .5s ease;
 	transition: .5s ease;
-	color: #5e5e5e;
+	color: transparent;
 }
 
 .link-widget-two ul li a:hover:before {
