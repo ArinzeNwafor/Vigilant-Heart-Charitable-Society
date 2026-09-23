@@ -77,6 +77,26 @@
     .main-header .sticky-header .sticky-menu-btn:hover .flaticon-menu { color: #f57134 !important; }
 }
 
+/* Donate modal rework (home) – theme-consistent, subtle rounding */
+#donate-popup .donate-form-wrapper { border-radius: 12px; padding: 36px; }
+#donate-popup .bank-details h3,
+#donate-popup .payment-methods h3 { font-family: 'Prata', serif; font-size: 24px; color: #1d1747; margin-bottom: 24px; }
+#donate-popup .account-card { border-radius: 10px; }
+#donate-popup .account-card::before { border-radius: 10px 0 0 10px; }
+#donate-popup .method-card { border-radius: 10px; }
+#donate-popup .method-icon { background: linear-gradient(135deg, #f57134, #d95e26); }
+#donate-popup .copy-btn:hover { background: #1d1747; border-color: #1d1747; box-shadow: 0 4px 12px rgba(29,23,71,.3); }
+#donate-popup .close-donate:hover { background: #f57134; transform: scale(1.05); }
+#donate-popup .donate-cta,
+#donate-popup .gratitude-message { border-radius: 12px; }
+#donate-popup .contact-item { border-radius: 10px; }
+#donate-popup .cta-buttons .theme-btn { border-radius: 8px; }
+@media (max-width: 767px) {
+    #donate-popup .donate-form-wrapper { padding: 28px 22px; }
+    #donate-popup .bank-details h3 { font-size: 20px; margin-bottom: 20px; }
+    #donate-popup .account-card { padding: 20px; }
+}
+
 /* Bigger mobile logo (home) */
 @media (max-width: 1199px) {
     .main-header .mobile-menu .logo img { width: auto; height: auto; max-width: 230px !important; }
