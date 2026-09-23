@@ -158,7 +158,7 @@
 
 /* Testimonial bg-4 focal point on mobile */
 @media (max-width: 767px) {
-    .testimonial-section .sec-bg-two { background-position: 50% 30%; }
+    .testimonial-section .sec-bg-two { background-position: 25% 30%; }
 }
 
 /* Bigger mobile logo (home) */
