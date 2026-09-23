@@ -64,9 +64,22 @@
     .banner-section.style-two .content-box h1 { font-size: 32px; }
 }
 
+/* Mobile sticky scroll navbar – runs the desktop transition on phones */
+.sticky-header .sticky-menu-btn { display: none; }
+@media (max-width: 1199px) {
+    .sticky-header { display: block; }
+    .fixed-header .sticky-header { z-index: 9990; }
+    .main-header .sticky-header .logo img { max-width: 150px !important; height: auto !important; }
+    .sticky-header .menu-column { display: flex; align-items: center; }
+    .sticky-header .menu-column .nav-outer { display: none; }
+    .sticky-header .sticky-menu-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: none; border: none; cursor: pointer; padding: 0; }
+    .main-header .sticky-header .sticky-menu-btn .flaticon-menu { font-size: 26px; line-height: 1; color: #302c51 !important; }
+    .main-header .sticky-header .sticky-menu-btn:hover .flaticon-menu { color: #f57134 !important; }
+}
+
 /* Bigger mobile logo (home) */
 @media (max-width: 1199px) {
-    .mobile-menu .logo img { width: auto; height: auto; max-width: 100%; max-height: 68px; }
+    .main-header .mobile-menu .logo img { width: auto; height: auto; max-width: 230px !important; }
 }
 
 
