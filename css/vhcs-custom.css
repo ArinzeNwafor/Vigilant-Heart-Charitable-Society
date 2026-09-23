@@ -53,3 +53,24 @@
     .vhcs-post-body h4 { font-size: 17px; min-height: 0; }
     .vhcs-post-author span { max-width: 130px; }
 }
+
+/* Hero / banner mobile revamp (home) */
+@media (max-width: 991px) {
+    .banner-section.style-two .content-box { min-height: 620px; }
+    .banner-section.style-two .content-box h1 { font-size: 40px; line-height: 1.2; }
+}
+@media (max-width: 767px) {
+    .banner-section.style-two .content-box { min-height: 0; padding: 110px 20px 90px; align-items: flex-end; }
+    .banner-section.style-two .content-box.justify-content-end { justify-content: flex-start; }
+    .banner-section.style-two .content-box .inner { max-width: 100%; }
+    .banner-section.style-two .content-box h1 { font-size: 32px; line-height: 1.28; margin-bottom: 18px; }
+    .banner-section.style-two h4 { font-size: 13px; letter-spacing: 2px; margin-bottom: 12px; }
+    .banner-section.style-two .link-box { margin-top: 10px; }
+    .banner-section.style-two .swiper-slide { background-position: 68% center; }
+    .banner-section.style-two .swiper-slide::before { background: linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.78)); }
+    .banner-slider-pagination.style-three { bottom: 24px; }
+}
+@media (max-width: 480px) {
+    .banner-section.style-two .content-box { padding: 100px 18px 84px; }
+    .banner-section.style-two .content-box h1 { font-size: 27px; line-height: 1.3; }
+}
