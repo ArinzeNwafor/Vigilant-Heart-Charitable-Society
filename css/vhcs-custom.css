@@ -47,8 +47,9 @@
     .vhcs-blog-head { flex-direction: column; align-items: flex-start; margin-bottom: 30px; }
     .vhcs-blog-head h2 { font-size: 29px; }
     .vhcs-blog-head p { font-size: 15px; }
-    .vhcs-post-media img { height: 190px; }
-    .vhcs-post-body { padding: 34px 18px 18px; }
+    .blog-slider { padding: 30px 2px 20px !important; }
+    .vhcs-post-media img { height: 200px; }
+    .vhcs-post-body { padding: 34px 20px 18px; }
     .vhcs-post-body h4 { font-size: 17px; min-height: 0; }
     .vhcs-post-author span { max-width: 130px; }
 }
