@@ -92,9 +92,43 @@
 #donate-popup .contact-item { border-radius: 10px; }
 #donate-popup .cta-buttons .theme-btn { border-radius: 8px; }
 @media (max-width: 767px) {
-    #donate-popup .donate-form-wrapper { padding: 28px 22px; }
-    #donate-popup .bank-details h3 { font-size: 20px; margin-bottom: 20px; }
-    #donate-popup .account-card { padding: 20px; }
+    #donate-popup .donate-form-wrapper { padding: 24px 18px; }
+    #donate-popup .donate-form-area { width: 94%; max-height: 92vh; }
+    #donate-popup .close-donate { width: 36px; height: 36px; top: 12px; right: 12px; }
+    #donate-popup .bank-details { margin-bottom: 20px; padding-top: 8px; }
+    #donate-popup .bank-details h3 { font-size: 20px; margin-bottom: 16px; }
+    #donate-popup .payment-methods h3 { font-size: 19px; margin-bottom: 14px; }
+    #donate-popup .account-cards { gap: 12px; }
+    #donate-popup .account-card { padding: 16px; gap: 12px; }
+    #donate-popup .bank-logo { width: 44px; height: 44px; }
+    #donate-popup .account-info h4 { font-size: .95rem; margin-bottom: 8px; }
+    #donate-popup .account-number { padding: 10px; min-height: 0; }
+    #donate-popup .account-number .number { font-size: 1rem; }
+    #donate-popup .copy-btn { height: 32px; padding: 6px 10px; font-size: .75rem; }
+    #donate-popup .bank-name { font-size: .8rem; }
+    #donate-popup .payment-methods { margin-bottom: 20px; }
+    #donate-popup .method-grid { gap: 12px; }
+    #donate-popup .method-card { padding: 16px 12px; }
+    #donate-popup .method-icon { width: 48px; height: 48px; margin-bottom: 10px; }
+    #donate-popup .method-icon i { font-size: 22px; }
+    #donate-popup .method-card h4 { font-size: 1rem; margin-bottom: 6px; }
+    #donate-popup .method-card p { font-size: .82rem; }
+    #donate-popup .donate-cta { padding: 20px 16px; margin-bottom: 20px; }
+    #donate-popup .cta-message { margin-bottom: 16px; }
+    #donate-popup .cta-message p { font-size: .9rem; margin-bottom: 12px; }
+    #donate-popup .contact-item { padding: 10px 14px; font-size: .85rem; }
+    #donate-popup .cta-buttons { gap: 12px; }
+    #donate-popup .cta-buttons .theme-btn { padding: 10px 20px; font-size: 14px; }
+    #donate-popup .gratitude-message { padding: 20px 16px; }
+    #donate-popup .gratitude-message p { font-size: .92rem; margin-bottom: 12px; }
+    #donate-popup .quote-icon { font-size: 30px; margin-bottom: 10px; }
+}
+@media (max-width: 480px) {
+    #donate-popup .donate-form-wrapper { padding: 20px 14px; }
+    #donate-popup .bank-details h3 { font-size: 18px; }
+    #donate-popup .payment-methods h3 { font-size: 17px; }
+    #donate-popup .account-card { padding: 14px 12px; }
+    #donate-popup .method-card p { font-size: .78rem; }
 }
 
 /* Bigger mobile logo (home) */
