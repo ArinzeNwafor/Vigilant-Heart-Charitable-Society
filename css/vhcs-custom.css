@@ -64,10 +64,8 @@
     .banner-section.style-two .content-box h1 { font-size: 32px; }
 }
 
-/* Bigger mobile logo + sticky mobile navbar (home) */
+/* Bigger mobile logo (home) */
 @media (max-width: 1199px) {
-    .main-header { padding-top: 108px; }
-    .mobile-menu .menu-box { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; box-shadow: 0 4px 18px rgba(0,0,0,.10); }
     .mobile-menu .logo img { width: auto; height: auto; max-width: 100%; max-height: 68px; }
 }
 
