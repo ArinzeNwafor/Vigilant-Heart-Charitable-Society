@@ -100,8 +100,8 @@
                                                 <li class="dropdown current"><a href="projects.html">Our Projects</a>
                                                     <ul>
                                                         <li><a href="sponsor.html">Sponsor a Child</a></li>
-                                                        <li><a href="projects.html#child-welfare">Child Welfare Initiative</a></li>
-                                                        <li><a href="projects.html#crisis-pregnancy">Youth Crisis Pregnancy</a></li>
+                                                        <li><a href="child-welfare.html">VHCS Children's Home</a></li>
+                                                        <li><a href="crisis-pregnancy.html">Youth Crisis Pregnancy</a></li>
                                                         <li><a href="documents/urgent-needs-list.pdf" target="_blank">Urgent Needs</a></li>
                                                     </ul>
                                                 </li>
@@ -266,7 +266,7 @@
             </div>
         </section>
 
-                <!-- Page Title -->
+        <!-- Page Title -->
         <section class="page-title" style="background-image: url(images/background/bg-3.jpg);">
             <div class="auto-container">
                 <div class="content-box">
@@ -279,116 +279,361 @@
             </div>
         </section>
 
-        <!-- Introduction Section -->
-        <section class="about-section" style="padding: 100px 0;">
-            <div class="auto-container">
-                <div class="sec-title text-center mb-5">
-                    <span class="subtitle">Our Initiatives</span>
-                    <h2>Transforming Lives Through Action</h2>
-                </div>
-                <div class="text text-center">
-                    <p>Vigilant Heart Charitable Society runs multiple community-driven projects to uplift vulnerable children and families in Lagos, Nigeria.</p>
-                </div>
-            </div>
-        </section>
+        <style>
+            /* ── Project Page Custom Styles ── */
 
-        <!-- Child Welfare Initiative Section -->
-        <section id="child-welfare" class="about-section" style="padding: 50px 0;">
+            /* Stat counters — warm, inline, not boxy */
+            .proj-stats-row {
+                display: flex;
+                flex-wrap: wrap;
+                border-top: 1px solid #e8e8e8;
+                margin-top: 40px;
+                padding-top: 35px;
+            }
+            .proj-stats-row .stat-item {
+                flex: 1 1 45%;
+                padding: 0 20px 25px 0;
+            }
+            .proj-stats-row .stat-item .num {
+                display: block;
+                font-family: 'Prata', serif;
+                font-size: 38px;
+                color: var(--theme-color-two);
+                line-height: 1;
+                margin-bottom: 6px;
+            }
+            .proj-stats-row .stat-item .desc {
+                font-family: 'Rubik', sans-serif;
+                font-size: 14px;
+                color: #888;
+            }
+
+            /* Section label consistent with about.html */
+            .proj-label {
+                color: var(--theme-color-two);
+                font-size: 13px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 14px;
+                font-family: 'Rubik', sans-serif;
+            }
+            .proj-label::before {
+                content: '';
+                display: inline-block;
+                width: 35px;
+                height: 2px;
+                background: var(--theme-color-two);
+                flex-shrink: 0;
+            }
+
+            /* Checklist replacing pills */
+            .proj-checklist {
+                list-style: none;
+                padding: 0;
+                margin: 22px 0 28px;
+            }
+            .proj-checklist li {
+                font-family: 'Rubik', sans-serif;
+                font-size: 15px;
+                color: #555;
+                padding: 7px 0 7px 28px;
+                position: relative;
+                border-bottom: 1px solid #f0f0f0;
+            }
+            .proj-checklist li:last-child { border-bottom: none; }
+            .proj-checklist li::before {
+                content: '\f00c';
+                font-family: 'FontAwesome';
+                position: absolute;
+                left: 0;
+                color: var(--theme-color-two);
+                font-size: 13px;
+                top: 9px;
+            }
+            .proj-checklist li strong { color: #1d1747; font-weight: 600; }
+
+            /* Image wrap */
+            .proj-img-wrap {
+                position: relative;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            }
+            .proj-img-wrap img { width: 100%; display: block; }
+
+            /* Service cards */
+            .proj-service-card {
+                background: #fff;
+                border-radius: 12px;
+                padding: 38px 30px 32px;
+                border-top: 3px solid var(--theme-color-two);
+                box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+                transition: all 0.3s ease;
+                height: 100%;
+                text-align: center;
+            }
+            .proj-service-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 14px 36px rgba(0,0,0,0.11);
+            }
+            .proj-service-card .sc-icon {
+                font-size: 52px;
+                color: var(--theme-color-two);
+                margin-bottom: 20px;
+                display: block;
+            }
+            .proj-service-card h4 {
+                font-family: 'Prata', serif;
+                font-size: 19px;
+                color: #1d1747;
+                margin-bottom: 12px;
+            }
+            .proj-service-card p {
+                font-family: 'Rubik', sans-serif;
+                font-size: 15px;
+                color: #666;
+                line-height: 1.8;
+                margin: 0 0 20px;
+            }
+            .proj-service-card a.sc-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 7px;
+                color: var(--theme-color-two);
+                font-family: 'Rubik', sans-serif;
+                font-size: 13px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                text-decoration: none;
+                transition: gap 0.2s ease;
+            }
+            .proj-service-card a.sc-link:hover { gap: 12px; }
+
+            /* Orange filled CTA button — no white hover */
+            .proj-btn-primary {
+                display: inline-block;
+                padding: 14px 38px;
+                background: var(--theme-color-two);
+                color: #fff !important;
+                font-family: 'Rubik', sans-serif;
+                font-size: 13px;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                border-radius: 29px;
+                border: 2px solid var(--theme-color-two);
+                transition: background 0.3s ease, border-color 0.3s ease;
+                text-decoration: none;
+                line-height: 24px;
+            }
+            .proj-btn-primary:hover {
+                background: #1d1747;
+                border-color: #1d1747;
+                color: #fff !important;
+            }
+            /* Outlined pill button — same shape, transparent fill */
+            .proj-btn-outline {
+                display: inline-block;
+                padding: 14px 38px;
+                background: transparent;
+                color: #1d1747 !important;
+                font-family: 'Rubik', sans-serif;
+                font-size: 13px;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                border-radius: 29px;
+                border: 2px solid #1d1747;
+                transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+                text-decoration: none;
+                line-height: 24px;
+            }
+            .proj-btn-outline:hover {
+                background: #1d1747;
+                color: #fff !important;
+            }
+        </style>
+
+        <!-- ── Intro / Stats ── -->
+        <section style="padding: 90px 0 80px; background: #fff;">
             <div class="auto-container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="image-box">
-                            <div class="image"><img src="images/resource/portrait-smiley-young-african-boy_23-2148852718.jpg" alt="Child Welfare" style="border-radius: 10px; width:100%;"></div>
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="proj-label">Our Initiatives</div>
+                        <h2 style="font-family:'Prata',serif; color:#1d1747; font-size:38px; line-height:1.25; margin-bottom:20px;">Transforming Lives<br>Through Action</h2>
+                        <p style="font-family:'Rubik',sans-serif; font-size:16px; color:#666; line-height:1.9; margin-bottom:0;">Vigilant Heart Charitable Society runs community-driven projects that uplift vulnerable children and families across Lagos, Nigeria. From education sponsorship to crisis support, every initiative is rooted in compassion, dignity, and lasting change.</p>
+                        <div class="proj-stats-row">
+                            <div class="stat-item">
+                                <span class="num">80+</span>
+                                <span class="desc">Children in Care</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="num">1,250+</span>
+                                <span class="desc">Lives Impacted</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="num">40+</span>
+                                <span class="desc">Mothers Supported</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="num">320+</span>
+                                <span class="desc">Youth Trained</span>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="about-content-block" style="padding-left: 30px;">
-                            <span class="subtitle">Child Welfare</span>
-                            <h2>Child Welfare Initiative</h2>
-                            <div class="text">
-                                <p>VHCS is dedicated to improving the lives of underprivileged children through comprehensive welfare programs. This includes providing safe shelter, nutritious meals, healthcare access, and emotional support to children who have been orphaned, abandoned, or are living in extreme poverty. The initiative focuses on holistic child development — ensuring every child has access to education, recreation, and the nurturing environment they need to thrive.</p>
-                            </div>
-                            <div class="row mt-4 mb-4">
-                                <div class="col-md-4"><strong>80+</strong> Children Housed</div>
-                                <div class="col-md-4"><strong>150+</strong> Lives Impacted</div>
-                                <div class="col-md-4"><strong>5</strong> Community Partners</div>
-                            </div>
-                            <div class="link-btn mt-4">
-                                <a href="#" class="theme-btn btn-style-one donate-box-btn"><span>Support This Initiative</span></a>
-                            </div>
+                        <div class="proj-img-wrap">
+                            <img src="images/resource/image-12.jpg" alt="VHCS Projects">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Youth Crisis Pregnancy Section -->
-        <section id="crisis-pregnancy" class="about-section" style="background-color: #f8f9fa; padding: 100px 0;">
+        <!-- ── Sponsor a Child ── -->
+        <section id="sponsor-a-child" style="padding: 100px 0; background: #f8f9fa;">
             <div class="auto-container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="about-content-block" style="padding-right: 30px;">
-                            <span class="subtitle">Crisis Support</span>
-                            <h2>Youth Crisis Pregnancy</h2>
-                            <div class="text">
-                                <p>With numerous cases of crisis pregnancy among young women in Nigeria, VHCS has taken on the mission to provide critical support to vulnerable young mothers and their babies. The program offers safe temporary housing, prenatal and postnatal care, counseling services, and skills training to help young mothers become self-sufficient. VHCS believes that no young woman should face pregnancy alone, and no child should begin life without proper care.</p>
-                            </div>
-                            <div class="row mt-4 mb-4">
-                                <div class="col-md-4"><strong>40+</strong> Mothers Supported</div>
-                                <div class="col-md-4"><strong>35+</strong> Babies Delivered Safely</div>
-                                <div class="col-md-4">Ongoing Counseling</div>
-                            </div>
-                            <div class="link-btn mt-4">
-                                <a href="#" class="theme-btn btn-style-one donate-box-btn"><span>Help a Young Mother</span></a>
-                            </div>
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="proj-img-wrap">
+                            <img src="images/resource/sponosor-a-child.jpg" alt="Sponsor a Child">
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="image-box">
-                            <div class="image"><img src="images/resource/young-depressed-adult-home.jpg" alt="Youth Crisis Pregnancy" style="border-radius: 10px; width:100%;"></div>
+                        <div style="padding-left: 45px;">
+                            <div class="proj-label">Sponsorship Program</div>
+                            <h2 style="font-family:'Prata',serif; color:#1d1747; font-size:32px; margin-bottom:16px;">Sponsor a Child</h2>
+                            <p style="font-family:'Rubik',sans-serif; font-size:15px; color:#666; line-height:1.9; margin-bottom:0;">Our flagship program gives orphaned and underprivileged children access to quality education — covering school fees, textbooks, uniforms, nutritious meals, healthcare and warm mentorship. Your sponsorship becomes a permanent part of a child's story.</p>
+                            <ul class="proj-checklist">
+                                <li><strong>80+</strong> children currently enrolled in the program</li>
+                                <li><strong>320+</strong> youth trained through skills development</li>
+                                <li><strong>1,250+</strong> total lives impacted since inception</li>
+                                <li>Full academic support from primary to secondary school</li>
+                            </ul>
+                            <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+                                <a href="sponsor.html" class="proj-btn-primary">Become a Sponsor</a>
+                                <a href="#" class="proj-btn-outline volunteer-btn">Volunteer</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Other Projects Overview Section -->
-        <section class="about-section" style="padding: 100px 0;">
+        <!-- ── VHCS Children's Home ── -->
+        <section id="child-welfare" style="padding: 100px 0; background: #fff;">
             <div class="auto-container">
-                <div class="sec-title text-center mb-5">
-                    <h2>More Ways We Serve</h2>
-                </div>
-                <div class="row justify-content-center mt-5">
-                    <div class="col-lg-4 col-md-6 text-center mb-4">
-                        <a href="sponsor.html" style="display:block;">
-                        <div class="icon-box" style="font-size: 60px; color: var(--theme-color-two); margin-bottom: 15px;"><span class="flaticon-book"></span></div>
-                        <h4>Education Support</h4>
-                        <p class="mt-3 text" style="color: #666;">Join our Sponsor a Child education program to provide quality learning opportunities for underprivileged children.</p>
-                        </a>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0">
+                        <div class="proj-img-wrap">
+                            <img src="images/resource/portrait-smiley-young-african-boy_23-2148852718.jpg" alt="VHCS Children's Home">
+                        </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 text-center mb-4">
-                        <div class="icon-box" style="font-size: 60px; color: var(--theme-color-two); margin-bottom: 15px;"><span class="flaticon-heart"></span></div>
-                        <h4>Health & Nutrition</h4>
-                        <p class="mt-3 text" style="color: #666;">Delivering essential healthcare and daily nutritious meals to promote strong physical and mental development.</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 text-center mb-4">
-                        <div class="icon-box" style="font-size: 60px; color: var(--theme-color-two); margin-bottom: 15px;"><span class="flaticon-volunteer"></span></div>
-                        <h4>Community Outreach</h4>
-                        <p class="mt-3 text" style="color: #666;">Engaging with the community through grassroots programs to provide holistic support for families.</p>
+                    <div class="col-lg-6 order-lg-1">
+                        <div style="padding-right: 45px;">
+                            <div class="proj-label">Child Welfare</div>
+                            <h2 style="font-family:'Prata',serif; color:#1d1747; font-size:32px; margin-bottom:16px;">VHCS Children's Home</h2>
+                            <p style="font-family:'Rubik',sans-serif; font-size:15px; color:#666; line-height:1.9; margin-bottom:0;">VHCS provides safe shelter, nutritious meals, healthcare access, and emotional support to children who have been orphaned, abandoned, or living in extreme poverty. Every child deserves a nurturing home — and we are committed to providing just that.</p>
+                            <ul class="proj-checklist">
+                                <li><strong>80+</strong> children currently housed and cared for</li>
+                                <li><strong>150+</strong> lives directly impacted by this initiative</li>
+                                <li><strong>5</strong> active community partners and volunteers</li>
+                                <li>Holistic development: education, health &amp; recreation</li>
+                            </ul>
+                            <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+                                <a href="child-welfare.html" class="proj-btn-outline">Learn More</a>
+                                <a href="#" class="proj-btn-primary donate-box-btn">Donate Now</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Call to Action Banner -->
-        <section class="call-to-action" style="background-image: url(images/background/bg-3.jpg); padding: 100px 0; position: relative;">
-            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 1;"></div>
+        <!-- ── Youth Crisis Pregnancy ── -->
+        <section id="crisis-pregnancy" style="padding: 100px 0; background: #f8f9fa;">
+            <div class="auto-container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="proj-img-wrap">
+                            <img src="images/resource/young-depressed-adult-home.jpg" alt="Youth Crisis Pregnancy">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div style="padding-left: 45px;">
+                            <div class="proj-label">Crisis Support</div>
+                            <h2 style="font-family:'Prata',serif; color:#1d1747; font-size:32px; margin-bottom:16px;">Youth Crisis Pregnancy</h2>
+                            <p style="font-family:'Rubik',sans-serif; font-size:15px; color:#666; line-height:1.9; margin-bottom:0;">VHCS provides critical support to vulnerable young mothers and their babies — offering safe temporary housing, prenatal and postnatal care, counselling, and skills training. No young woman should face pregnancy alone, and no child should begin life without proper care.</p>
+                            <ul class="proj-checklist">
+                                <li><strong>40+</strong> young mothers supported through the program</li>
+                                <li><strong>35+</strong> babies delivered safely with medical support</li>
+                                <li>Ongoing counselling and emotional support services</li>
+                                <li>Vocational skills training for post-pregnancy independence</li>
+                            </ul>
+                            <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+                                <a href="crisis-pregnancy.html" class="proj-btn-outline">Learn More</a>
+                                <a href="#" class="proj-btn-primary donate-box-btn">Help a Young Mother</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── More Ways We Serve ── -->
+        <section style="padding: 100px 0; background: #fff;">
+            <div class="auto-container">
+                <div class="sec-title text-center" style="margin-bottom: 55px;">
+                    <span class="subtitle">How We Serve</span>
+                    <h2>More Ways We Make a Difference</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="proj-service-card">
+                            <span class="sc-icon flaticon-book"></span>
+                            <h4>Education Support</h4>
+                            <p>Quality learning opportunities — school fees, books, uniforms and mentorship — for underprivileged children across Lagos.</p>
+                            <a href="sponsor.html" class="sc-link">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="proj-service-card">
+                            <span class="sc-icon flaticon-heart"></span>
+                            <h4>Health &amp; Nutrition</h4>
+                            <p>Essential healthcare and daily nutritious meals to promote strong physical and mental development in every child under our care.</p>
+                            <a href="#" class="sc-link donate-box-btn">Support Us <i class="fa fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="proj-service-card">
+                            <span class="sc-icon flaticon-world"></span>
+                            <h4>Community Outreach</h4>
+                            <p>Grassroots outreach programs engaging local families, providing holistic support and connecting them to vital community resources.</p>
+                            <a href="#" class="sc-link volunteer-btn">Get Involved <i class="fa fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Call to Action ── -->
+        <section style="position: relative; padding: 120px 0; overflow: hidden;">
+            <div style="position: absolute; inset: 0; background: url('images/resource/image-14.jpg') center/cover no-repeat;"></div>
+            <div style="position: absolute; inset: 0; background: rgba(29, 23, 71, 0.82);"></div>
             <div class="auto-container" style="position: relative; z-index: 2;">
                 <div class="text-center">
-                    <h2 style="color: #fff; margin-bottom: 20px;">Every Child Deserves a Chance</h2>
-                    <p style="color: #fff; font-size: 1.2rem; margin-bottom: 40px;">Your support helps us continue our life-changing work. Join us today.</p>
-                    <a href="#" class="theme-btn btn-style-one donate-box-btn mr-3"><span>Donate Now</span></a>
-                    <a href="#" class="theme-btn btn-style-four volunteer-btn"><span>Volunteer</span></a>
+                    <span class="subtitle" style="color: var(--theme-color-two);">Make a Difference</span>
+                    <h2 style="font-family:'Prata',serif; color:#fff; font-size:42px; margin: 14px 0 18px; line-height:1.3;">Every Child Deserves a Chance</h2>
+                    <p style="font-family:'Rubik',sans-serif; color:rgba(255,255,255,0.85); font-size:17px; margin-bottom:40px; max-width:600px; margin-left:auto; margin-right:auto; line-height:1.8;">Your support helps us continue our life-changing work across Lagos. Together we can give every child the shelter, education, and love they deserve.</p>
+                    <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; align-items:center;">
+                        <a href="#" class="proj-btn-primary donate-box-btn">Donate Now</a>
+                        <a href="#" class="volunteer-btn" style="display:inline-block; padding:14px 38px; background:transparent; color:#fff !important; font-family:'Rubik',sans-serif; font-size:13px; font-weight:500; text-transform:uppercase; letter-spacing:0.5px; border-radius:29px; border:2px solid rgba(255,255,255,0.6); transition:all 0.3s ease; text-decoration:none; line-height:24px;">Volunteer With Us</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -631,6 +876,140 @@
         </div>
 
     </div>
+<!-- Home Flyer Popup -->
+        <style>
+            .flyer-popup {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 10000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .45s ease, visibility .45s ease;
+            }
+            .flyer-popup.flyer-popup-open {
+                opacity: 1;
+                visibility: visible;
+            }
+            .flyer-popup-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(20, 17, 40, 0.82);
+                -webkit-backdrop-filter: blur(3px);
+                backdrop-filter: blur(3px);
+            }
+            .flyer-popup-content {
+                position: relative;
+                max-width: 90vw;
+                max-height: 90vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: scale(0.92);
+                transition: transform .45s ease;
+            }
+            .flyer-popup.flyer-popup-open .flyer-popup-content {
+                transform: scale(1);
+            }
+            .flyer-popup-content img {
+                max-width: 90vw;
+                max-height: 90vh;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                display: block;
+                box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+            }
+            .flyer-popup-close {
+                position: absolute;
+                top: 14px;
+                right: 14px;
+                z-index: 2;
+                width: 42px;
+                height: 42px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: #ffffff;
+                color: #302c51;
+                border: none;
+                font-size: 18px;
+                cursor: pointer;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+                transition: all .3s ease;
+            }
+            .flyer-popup-close:hover {
+                background: #f57134;
+                color: #ffffff;
+                transform: rotate(90deg);
+            }
+            .flyer-actions {
+                position: absolute;
+                top: 22px;
+                right: 22px;
+                display: flex;
+                gap: 18px;
+                z-index: 3;
+            }
+            .flyer-action-link {
+                background: none;
+                border: none;
+                padding: 0;
+                font-size: 15px;
+                font-weight: 500;
+                font-family: 'Rubik', sans-serif;
+                color: rgba(255, 255, 255, 0.92);
+                text-decoration: none;
+                cursor: pointer;
+                transition: color .25s ease;
+                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+            }
+            .flyer-action-link:hover,
+            .flyer-action-link:focus {
+                color: #f57134;
+            }
+            @media (max-width: 575px) {
+                .flyer-popup {
+                    padding: 10px;
+                }
+                .flyer-popup-content,
+                .flyer-popup-content img {
+                    max-height: 85vh;
+                }
+                .flyer-actions {
+                    top: 14px;
+                    right: 14px;
+                    gap: 12px;
+                }
+                .flyer-action-link {
+                    font-size: 13px;
+                }
+            }
+        </style>
+        <div id="flyer-popup" class="flyer-popup" role="dialog" aria-modal="true" aria-label="Welcome to Vigilant Heart Charitable Society">
+            <div class="flyer-popup-overlay"></div>
+            <div class="flyer-actions">
+                <a class="flyer-action-link" href="images/home-flyer.jpg" download="VHCS-Flyer.jpg" id="flyer-download">Download Flyer</a>
+                <button type="button" class="flyer-action-link" id="flyer-share">Share Flyer</button>
+            </div>
+            <div class="flyer-popup-content">
+                <button type="button" class="flyer-popup-close" aria-label="Close"><span class="fa fa-times"></span></button>
+                <a href="index.html" aria-label="View VHCS home flyer">
+                    <img src="images/home-flyer.jpg" alt="VHCS Home Flyer - Welcome to Vigilant Heart Charitable Society">
+                </a>
+            </div>
+        </div>
+
     <!--End pagewrapper-->
 
 
@@ -1921,6 +2300,93 @@
         });
     </script>
 
-</body>
+    <script>
+        (function() {
+            var popup = document.getElementById('flyer-popup');
+            if (!popup) return;
+            var shown = false;
 
-</html>
+            function show() {
+                if (shown) return;
+                shown = true;
+                popup.classList.add('flyer-popup-open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function hide() {
+                popup.classList.remove('flyer-popup-open');
+                document.body.style.overflow = '';
+            }
+            setTimeout(show, 7000);
+            var closeBtn = popup.querySelector('.flyer-popup-close');
+            var overlay = popup.querySelector('.flyer-popup-overlay');
+            var img = popup.querySelector('img');
+            var shareBtn = popup.querySelector('#flyer-share');
+            var downloadLink = popup.querySelector('#flyer-download');
+            if (closeBtn) closeBtn.addEventListener('click', hide);
+            if (overlay) overlay.addEventListener('click', hide);
+            if (img) img.addEventListener('error', hide);
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') hide();
+            });
+            if (shareBtn) {
+                shareBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (navigator.share) {
+                        navigator.share({
+                            title: 'Vigilant Heart Charitable Society',
+                            text: 'Vigilant Heart Charitable Society (VHCS) - Help us bring hope to vulnerable children.',
+                            url: window.location.href
+                        }).catch(function() { fallbackShare(); });
+                    } else {
+                        fallbackShare();
+                    }
+                });
+            }
+            function fallbackShare() {
+                var dummy = document.createElement('textarea');
+                dummy.value = window.location.href;
+                document.body.appendChild(dummy);
+                dummy.select();
+                try { document.execCommand('copy'); } catch (err) {}
+                document.body.removeChild(dummy);
+                shareBtn.textContent = 'Link copied!';
+                setTimeout(function() { shareBtn.textContent = 'Share Flyer'; }, 2500);
+            }
+            if (downloadLink) {
+                downloadLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var href = downloadLink.getAttribute('href');
+                    function saveBlob(blob) {
+                        var url = URL.createObjectURL(blob);
+                        var a = document.createElement('a');
+                        a.href = url;
+                        a.download = 'VHCS-Flyer.jpg';
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+                    }
+                    try {
+                        var xhr = new XMLHttpRequest();
+                        xhr.open('GET', href, true);
+                        xhr.responseType = 'blob';
+                        xhr.onload = function() {
+                            if (xhr.status === 200 || xhr.status === 0) {
+                                saveBlob(xhr.response);
+                            } else {
+                                window.location.href = href;
+                            }
+                        };
+                        xhr.onerror = function() { window.location.href = href; };
+                        xhr.send();
+                    } catch (err) {
+                        window.location.href = href;
+                    }
+                });
+            }
+        })();
+    </script>
+
+
+</body></html>
