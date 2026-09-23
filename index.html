@@ -25,6 +25,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/sidebar-style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/vhcs-custom.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <!-- Responsive -->
@@ -1261,18 +1262,6 @@
                 .contact-item a:hover {
                     color: #ff6b6b !important;
                 }
-                .blog-slider-prev:hover {
-                    background: #f57134 !important;
-                    color: #ffffff !important;
-                    transform: translateY(-3px);
-                    box-shadow: 0 6px 15px rgba(245, 113, 52, 0.3) !important;
-                }
-                .blog-slider-next:hover {
-                    background: #d95e26 !important;
-                    border-color: #d95e26 !important;
-                    transform: translateY(-3px);
-                    box-shadow: 0 6px 15px rgba(217, 94, 38, 0.4) !important;
-                }
             } /* End of max-width: 991px */
                 
             /* Top Bar Enhancements */
@@ -1312,179 +1301,130 @@
         </style>
 
         <!-- Blog Section -->
-        <section class="blog-section" style="padding: 90px 0; position: relative; background-color: #fafafa;">
+        <section class="blog-section vhcs-blog">
             <div class="auto-container">
-                <div class="sec-title d-flex justify-content-between align-items-end mb-4 flex-wrap" style="gap: 20px;">
+                <div class="vhcs-blog-head">
                     <div>
-                        <h5 style="color: #f57134;">News & Outreaches</h5>
-                        <h1>Latest News & Updates</h1>
-                        <div class="text">Stay up-to-date with stories, outreaches, and progress at Vigilant Heart.</div>
+                        <h5 style="color: #f57134;">News &amp; Outreaches</h5>
+                        <h2>Latest News &amp; Updates</h2>
+                        <p>Stay up-to-date with stories, outreaches, and progress at Vigilant Heart.</p>
                     </div>
-                    <!-- Navigation Buttons -->
-                    <div class="blog-slider-nav d-flex align-items-center" style="gap: 12px;">
-                        <button class="blog-slider-prev" style="width: 44px; height: 44px; border-radius: 50%; border: 2px solid #f57134; background: #ffffff; color: #f57134; font-size: 16px; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(245, 113, 52, 0.15);"><i class="fa fa-angle-left"></i></button>
-                        <button class="blog-slider-next" style="width: 44px; height: 44px; border-radius: 50%; border: 2px solid #f57134; background: #f57134; color: #ffffff; font-size: 16px; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(245, 113, 52, 0.25);"><i class="fa fa-angle-right"></i></button>
+                    <div class="vhcs-blog-nav">
+                        <button class="blog-slider-prev" aria-label="Previous stories"><i class="fa fa-angle-left"></i></button>
+                        <button class="blog-slider-next" aria-label="Next stories"><i class="fa fa-angle-right"></i></button>
                     </div>
                 </div>
 
                 <!-- Swiper Container -->
-                <div class="swiper-container blog-slider" style="padding: 10px 5px 25px; overflow: hidden;">
+                <div class="swiper-container blog-slider">
                     <div class="swiper-wrapper">
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
-                            <div class="news-block-two" style="margin-bottom: 0;">
-                                <div class="inner-box" style="border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.06); background: #fff;">
-                                    <div class="image">
-                                        <div class="category"><a href="#">Education</a></div>
-                                        <a href="#"><img src="images/resource/portrait-smiley-young-african-boy_23-2148852718.jpg" alt="Educational Outreach" style="height: 220px; object-fit: cover; width: 100%;"></a>
-                                        <div class="post-meta-info">
-                                            <a href="#"><span class="flaticon-eye"></span>213</a>
-                                            <a href="#"><span class="fa fa-heart"></span>89</a>
-                                            <a href="#"><span class="fa fa-share-alt"></span>14</a>
-                                        </div>
-                                    </div>
-                                    <div class="lower-content" style="padding: 22px 20px;">
-                                        <div class="date mb-2" style="font-size: 13px; color: #888;"><span class="flaticon-clock"></span> Aug 10, 2026</div>
-                                        <h4 style="font-size: 17px; line-height: 1.4; margin-bottom: 20px; font-weight: 700; height: 48px; overflow: hidden;"><a href="#">Empowering Our Children: Educational Outreach & School Fees</a></h4>
-                                        <div class="author-info d-flex align-items-center" style="border-top: 1px solid #f0f0f0; padding-top: 14px;">
-                                            <div class="image" style="margin-right: 12px; flex-shrink: 0; width: 36px; height: 36px;">
-                                                <img src="images/favicon-2.png" alt="VHCS" style="width: 100%; height: 100%; border-radius: 50%; object-fit: contain; padding: 3px; background: #fafafa; border: 1px solid #eaeaea;">
-                                            </div>
-                                            <div class="author-title" style="font-size: 13px; font-weight: 600; color: #444; text-transform: none;">VHCS Media Team</div>
-                                        </div>
+                            <article class="vhcs-post">
+                                <div class="vhcs-post-media">
+                                    <a class="img-wrap" href="#"><img src="images/resource/portrait-smiley-young-african-boy_23-2148852718.jpg" alt="Educational Outreach"></a>
+                                    <div class="category"><a href="#">Education</a></div>
+                                    <div class="vhcs-post-date"><strong>10</strong><span>Aug<br>2026</span></div>
+                                </div>
+                                <div class="vhcs-post-body">
+                                    <h4><a href="#">Empowering Our Children: Educational Outreach &amp; School Fees</a></h4>
+                                    <p>School fees, supplies and tutoring that keep vulnerable children learning.</p>
+                                    <div class="vhcs-post-foot">
+                                        <div class="vhcs-post-author"><span class="ava"><img src="images/favicon-2.png" alt="VHCS"></span><span>VHCS Media Team</span></div>
+                                        <a class="vhcs-post-link" href="#">Read story <i class="fa fa-angle-right"></i></a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
-                            <div class="news-block-two" style="margin-bottom: 0;">
-                                <div class="inner-box" style="border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.06); background: #fff;">
-                                    <div class="image">
-                                        <div class="category"><a href="#">Healthcare</a></div>
-                                        <a href="#"><img src="images/resource/cause-4.jpg" alt="Health & Nutrition" style="height: 220px; object-fit: cover; width: 100%;"></a>
-                                        <div class="post-meta-info">
-                                            <a href="#"><span class="flaticon-eye"></span>184</a>
-                                            <a href="#"><span class="fa fa-heart"></span>65</a>
-                                            <a href="#"><span class="fa fa-share-alt"></span>8</a>
-                                        </div>
-                                    </div>
-                                    <div class="lower-content" style="padding: 22px 20px;">
-                                        <div class="date mb-2" style="font-size: 13px; color: #888;"><span class="flaticon-clock"></span> Jul 28, 2026</div>
-                                        <h4 style="font-size: 17px; line-height: 1.4; margin-bottom: 20px; font-weight: 700; height: 48px; overflow: hidden;"><a href="#">Nourishing Hope: Community Health & Nutrition Expansion</a></h4>
-                                        <div class="author-info d-flex align-items-center" style="border-top: 1px solid #f0f0f0; padding-top: 14px;">
-                                            <div class="image" style="margin-right: 12px; flex-shrink: 0;">
-                                                <img src="images/resource/founder-image.jpg" alt="Mrs. Maria I. Osawemen" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
-                                            </div>
-                                            <div class="author-title" style="font-size: 13px; font-weight: 600; color: #444; text-transform: none;">Mrs. Maria I. Osawemen</div>
-                                        </div>
+                            <article class="vhcs-post">
+                                <div class="vhcs-post-media">
+                                    <a class="img-wrap" href="#"><img src="images/resource/cause-4.jpg" alt="Health and Nutrition"></a>
+                                    <div class="category"><a href="#">Healthcare</a></div>
+                                    <div class="vhcs-post-date"><strong>28</strong><span>Jul<br>2026</span></div>
+                                </div>
+                                <div class="vhcs-post-body">
+                                    <h4><a href="#">Nourishing Hope: Community Health &amp; Nutrition Expansion</a></h4>
+                                    <p>Meals, check-ups and nutrition support for growing bodies.</p>
+                                    <div class="vhcs-post-foot">
+                                        <div class="vhcs-post-author"><span class="ava"><img src="images/resource/founder-image.jpg" alt="Mrs. Maria I. Osawemen"></span><span>Mrs. Maria I. Osawemen</span></div>
+                                        <a class="vhcs-post-link" href="#">Read story <i class="fa fa-angle-right"></i></a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
-                            <div class="news-block-two" style="margin-bottom: 0;">
-                                <div class="inner-box" style="border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.06); background: #fff;">
-                                    <div class="image">
-                                        <div class="category"><a href="#">Sponsorship</a></div>
-                                        <a href="sponsor.html"><img src="images/resource/sponosor-a-child.jpg" alt="Child Sponsorship" style="height: 220px; object-fit: cover; width: 100%;"></a>
-                                        <div class="post-meta-info">
-                                            <a href="#"><span class="flaticon-eye"></span>345</a>
-                                            <a href="#"><span class="fa fa-heart"></span>142</a>
-                                            <a href="#"><span class="fa fa-share-alt"></span>22</a>
-                                        </div>
-                                    </div>
-                                    <div class="lower-content" style="padding: 22px 20px;">
-                                        <div class="date mb-2" style="font-size: 13px; color: #888;"><span class="flaticon-clock"></span> Jul 15, 2026</div>
-                                        <h4 style="font-size: 17px; line-height: 1.4; margin-bottom: 20px; font-weight: 700; height: 48px; overflow: hidden;"><a href="sponsor.html">Transforming Futures Through Child Sponsorship</a></h4>
-                                        <div class="author-info d-flex align-items-center" style="border-top: 1px solid #f0f0f0; padding-top: 14px;">
-                                            <div class="image" style="margin-right: 12px; flex-shrink: 0; width: 36px; height: 36px;">
-                                                <img src="images/favicon-2.png" alt="VHCS" style="width: 100%; height: 100%; border-radius: 50%; object-fit: contain; padding: 3px; background: #fafafa; border: 1px solid #eaeaea;">
-                                            </div>
-                                            <div class="author-title" style="font-size: 13px; font-weight: 600; color: #444; text-transform: none;">VHCS Media Team</div>
-                                        </div>
+                            <article class="vhcs-post">
+                                <div class="vhcs-post-media">
+                                    <a class="img-wrap" href="sponsor.html"><img src="images/resource/sponosor-a-child.jpg" alt="Child Sponsorship"></a>
+                                    <div class="category"><a href="sponsor.html">Sponsorship</a></div>
+                                    <div class="vhcs-post-date"><strong>15</strong><span>Jul<br>2026</span></div>
+                                </div>
+                                <div class="vhcs-post-body">
+                                    <h4><a href="sponsor.html">Transforming Futures Through Child Sponsorship</a></h4>
+                                    <p>How monthly sponsors cover education, meals and healthcare.</p>
+                                    <div class="vhcs-post-foot">
+                                        <div class="vhcs-post-author"><span class="ava"><img src="images/favicon-2.png" alt="VHCS"></span><span>VHCS Media Team</span></div>
+                                        <a class="vhcs-post-link" href="sponsor.html">Read story <i class="fa fa-angle-right"></i></a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
                         <!-- Slide 4 -->
                         <div class="swiper-slide">
-                            <div class="news-block-two" style="margin-bottom: 0;">
-                                <div class="inner-box" style="border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.06); background: #fff;">
-                                    <div class="image">
-                                        <div class="category"><a href="#">Recreation</a></div>
-                                        <a href="#"><img src="images/resource/cause-5.jpg" alt="Recreation" style="height: 220px; object-fit: cover; width: 100%;"></a>
-                                        <div class="post-meta-info">
-                                            <a href="#"><span class="flaticon-eye"></span>120</a>
-                                            <a href="#"><span class="fa fa-heart"></span>48</a>
-                                            <a href="#"><span class="fa fa-share-alt"></span>5</a>
-                                        </div>
-                                    </div>
-                                    <div class="lower-content" style="padding: 22px 20px;">
-                                        <div class="date mb-2" style="font-size: 13px; color: #888;"><span class="flaticon-clock"></span> Jun 30, 2026</div>
-                                        <h4 style="font-size: 17px; line-height: 1.4; margin-bottom: 20px; font-weight: 700; height: 48px; overflow: hidden;"><a href="#">Spreading Smiles: Weekend Skills & Creative Outreaches</a></h4>
-                                        <div class="author-info d-flex align-items-center" style="border-top: 1px solid #f0f0f0; padding-top: 14px;">
-                                            <div class="image" style="width: 36px; height: 36px; border-radius: 50%; background: #eef9f9; display: flex; align-items: center; justify-content: center; margin-right: 12px; flex-shrink: 0;">
-                                                <i class="fa fa-user" style="color: #18bec2; font-size: 14px;"></i>
-                                            </div>
-                                            <div class="author-title" style="font-size: 13px; font-weight: 600; color: #444; text-transform: none;">VHCS Volunteer Team</div>
-                                        </div>
+                            <article class="vhcs-post">
+                                <div class="vhcs-post-media">
+                                    <a class="img-wrap" href="#"><img src="images/resource/cause-5.jpg" alt="Recreation"></a>
+                                    <div class="category"><a href="#">Recreation</a></div>
+                                    <div class="vhcs-post-date"><strong>30</strong><span>Jun<br>2026</span></div>
+                                </div>
+                                <div class="vhcs-post-body">
+                                    <h4><a href="#">Spreading Smiles: Weekend Skills &amp; Creative Outreaches</a></h4>
+                                    <p>Weekend skills, games and creative sessions that spark joy.</p>
+                                    <div class="vhcs-post-foot">
+                                        <div class="vhcs-post-author"><span class="ava"><i class="fa fa-user"></i></span><span>VHCS Volunteer Team</span></div>
+                                        <a class="vhcs-post-link" href="#">Read story <i class="fa fa-angle-right"></i></a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
                         <!-- Slide 5 -->
                         <div class="swiper-slide">
-                            <div class="news-block-two" style="margin-bottom: 0;">
-                                <div class="inner-box" style="border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.06); background: #fff;">
-                                    <div class="image">
-                                        <div class="category"><a href="#">Facility</a></div>
-                                        <a href="#"><img src="images/resource/project-1.jpg" alt="Facility Upgrades" style="height: 220px; object-fit: cover; width: 100%;"></a>
-                                        <div class="post-meta-info">
-                                            <a href="#"><span class="flaticon-eye"></span>290</a>
-                                            <a href="#"><span class="fa fa-heart"></span>112</a>
-                                            <a href="#"><span class="fa fa-share-alt"></span>18</a>
-                                        </div>
-                                    </div>
-                                    <div class="lower-content" style="padding: 22px 20px;">
-                                        <div class="date mb-2" style="font-size: 13px; color: #888;"><span class="flaticon-clock"></span> Jun 12, 2026</div>
-                                        <h4 style="font-size: 17px; line-height: 1.4; margin-bottom: 20px; font-weight: 700; height: 48px; overflow: hidden;"><a href="#">Building a Safer Home: Facility Upgrades at VHCS Center</a></h4>
-                                        <div class="author-info d-flex align-items-center" style="border-top: 1px solid #f0f0f0; padding-top: 14px;">
-                                            <div class="image" style="width: 36px; height: 36px; border-radius: 50%; background: #eef9f9; display: flex; align-items: center; justify-content: center; margin-right: 12px; flex-shrink: 0;">
-                                                <i class="fa fa-user" style="color: #18bec2; font-size: 14px;"></i>
-                                            </div>
-                                            <div class="author-title" style="font-size: 13px; font-weight: 600; color: #444; text-transform: none;">Barr. Mathew Osawemen</div>
-                                        </div>
+                            <article class="vhcs-post">
+                                <div class="vhcs-post-media">
+                                    <a class="img-wrap" href="#"><img src="images/resource/project-1.jpg" alt="Facility Upgrades"></a>
+                                    <div class="category"><a href="#">Facility</a></div>
+                                    <div class="vhcs-post-date"><strong>12</strong><span>Jun<br>2026</span></div>
+                                </div>
+                                <div class="vhcs-post-body">
+                                    <h4><a href="#">Building a Safer Home: Facility Upgrades at VHCS Center</a></h4>
+                                    <p>Renovations and safety upgrades across the VHCS home.</p>
+                                    <div class="vhcs-post-foot">
+                                        <div class="vhcs-post-author"><span class="ava"><i class="fa fa-user"></i></span><span>Barr. Mathew Osawemen</span></div>
+                                        <a class="vhcs-post-link" href="#">Read story <i class="fa fa-angle-right"></i></a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
                         <!-- Slide 6 -->
                         <div class="swiper-slide">
-                            <div class="news-block-two" style="margin-bottom: 0;">
-                                <div class="inner-box" style="border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.06); background: #fff;">
-                                    <div class="image">
-                                        <div class="category"><a href="#">Volunteers</a></div>
-                                        <a href="#"><img src="images/resource/project-2.jpg" alt="Volunteer Story" style="height: 220px; object-fit: cover; width: 100%;"></a>
-                                        <div class="post-meta-info">
-                                            <a href="#"><span class="flaticon-eye"></span>412</a>
-                                            <a href="#"><span class="fa fa-heart"></span>187</a>
-                                            <a href="#"><span class="fa fa-share-alt"></span>31</a>
-                                        </div>
-                                    </div>
-                                    <div class="lower-content" style="padding: 22px 20px;">
-                                        <div class="date mb-2" style="font-size: 13px; color: #888;"><span class="flaticon-clock"></span> May 25, 2026</div>
-                                        <h4 style="font-size: 17px; line-height: 1.4; margin-bottom: 20px; font-weight: 700; height: 48px; overflow: hidden;"><a href="#">Voices of Hope: How Giving Your Time Transforms Lives</a></h4>
-                                        <div class="author-info d-flex align-items-center" style="border-top: 1px solid #f0f0f0; padding-top: 14px;">
-                                            <div class="image" style="width: 36px; height: 36px; border-radius: 50%; background: #eef9f9; display: flex; align-items: center; justify-content: center; margin-right: 12px; flex-shrink: 0;">
-                                                <i class="fa fa-user" style="color: #18bec2; font-size: 14px;"></i>
-                                            </div>
-                                            <div class="author-title" style="font-size: 13px; font-weight: 600; color: #444; text-transform: none;">Volunteer Coordinator</div>
-                                        </div>
+                            <article class="vhcs-post">
+                                <div class="vhcs-post-media">
+                                    <a class="img-wrap" href="#"><img src="images/resource/project-2.jpg" alt="Volunteer Story"></a>
+                                    <div class="category"><a href="#">Volunteers</a></div>
+                                    <div class="vhcs-post-date"><strong>25</strong><span>May<br>2026</span></div>
+                                </div>
+                                <div class="vhcs-post-body">
+                                    <h4><a href="#">Voices of Hope: How Giving Your Time Transforms Lives</a></h4>
+                                    <p>Volunteer stories from tutors, mentors and weekend helpers.</p>
+                                    <div class="vhcs-post-foot">
+                                        <div class="vhcs-post-author"><span class="ava"><i class="fa fa-user"></i></span><span>Volunteer Coordinator</span></div>
+                                        <a class="vhcs-post-link" href="#">Read story <i class="fa fa-angle-right"></i></a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
                     </div>
                 </div>
