@@ -131,6 +131,28 @@
     #donate-popup .method-card p { font-size: .78rem; }
 }
 
+/* Volunteer modal rework (home) – theme-consistent, compact */
+#volunteer-popup .donate-form-wrapper { border-radius: 12px; padding: 36px; }
+#volunteer-popup .donate-header { margin-bottom: 24px; padding-bottom: 24px; }
+#volunteer-popup .donate-header h1 { font-family: 'Prata', serif; font-size: 30px; color: #1d1747; margin-bottom: 8px; }
+#volunteer-popup .donate-header .subtitle { font-size: 1rem; }
+#volunteer-popup .message-card { background: linear-gradient(135deg, #1d1747, #302c51); border-radius: 12px; padding: 28px; }
+#volunteer-popup .message-card h3 { font-size: 22px; margin-bottom: 12px; }
+#volunteer-popup .message-card p { font-size: .95rem; margin-bottom: 18px; }
+#volunteer-popup .message-icon { font-size: 40px; margin-bottom: 14px; }
+#volunteer-popup .contact-item { border-radius: 10px; }
+#volunteer-popup .cta-buttons .theme-btn { border-radius: 8px; }
+@media (max-width: 767px) {
+    #volunteer-popup .donate-form-wrapper { padding: 24px 18px; }
+    #volunteer-popup .donate-header { margin-bottom: 18px; padding-bottom: 18px; }
+    #volunteer-popup .donate-header h1 { font-size: 24px; }
+    #volunteer-popup .impact-message { margin-bottom: 20px; }
+    #volunteer-popup .message-card { padding: 20px 16px; }
+    #volunteer-popup .message-card h3 { font-size: 19px; }
+    #volunteer-popup .message-card p { font-size: .88rem; }
+    #volunteer-popup .message-icon { font-size: 32px; margin-bottom: 10px; }
+}
+
 /* Bigger mobile logo (home) */
 @media (max-width: 1199px) {
     .main-header .mobile-menu .logo img { width: auto; height: auto; max-width: 230px !important; }
