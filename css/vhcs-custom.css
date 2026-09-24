@@ -158,6 +158,23 @@
     #volunteer-popup .contact-item { font-size: .8rem; padding: 10px 12px; }
 }
 
+/* Moments gallery (home #project) */
+.vhcs-gallery { columns: 3; column-gap: 16px; }
+.vhcs-g-item { position: relative; display: block; border-radius: 10px; overflow: hidden; break-inside: avoid; margin-bottom: 16px; }
+.vhcs-g-item img { width: 100%; height: auto; display: block; transition: transform .5s ease; }
+.vhcs-g-item:hover img { transform: scale(1.06); }
+.vhcs-g-zoom { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(29,23,71,.45); opacity: 0; transition: opacity .3s ease; }
+.vhcs-g-item:hover .vhcs-g-zoom { opacity: 1; }
+.vhcs-g-zoom i { width: 46px; height: 46px; border-radius: 50%; background: #f57134; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+@media (max-width: 767px) {
+    .vhcs-gallery { columns: 2; column-gap: 12px; }
+    .vhcs-g-item { margin-bottom: 12px; }
+}
+
+/* Testimonial header lifted off the bg image */
+.testimonial-section .sec-title { position: relative; z-index: 2; background: #fff; border-radius: 12px; padding: 28px 20px; margin-bottom: 35px; box-shadow: 0 6px 22px rgba(29,23,71,.08); }
+
+
 /* Testimonial bg-4 focal point on mobile */
 @media (max-width: 767px) {
     .testimonial-section .sec-bg-two { background-position: 25% 30%; }
