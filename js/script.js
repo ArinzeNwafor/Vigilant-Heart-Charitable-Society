@@ -753,6 +753,10 @@
 			speed: 1400,
 			spaceBetween: 0,
 			effect: "slide",
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
 			pagination: {
 				el: '.volunteer-carousel-pagination',
 				clickable: true,
