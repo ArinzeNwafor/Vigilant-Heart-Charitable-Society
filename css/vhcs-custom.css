@@ -220,4 +220,98 @@
     .main-header .mobile-menu .logo img { width: auto; height: auto; max-width: 230px !important; }
 }
 
+/* Medium, consistent image frames for the VHCS home photo carousel. */
+.causes-section-three .cause-carousel-wrapper { padding-left: 48px; }
+.causes-section-three .cause-block-three .image img {
+    width: 600px;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+.causes-section-three .cause-block-three .image {
+    overflow: hidden;
+    border-radius: 4px;
+}
+.causes-section-three .cause-block-three .content {
+    border-radius: 8px;
+}
+@media (max-width: 991px) and (min-width: 768px) {
+    .causes-section-three .cause-carousel-wrapper { padding-left: 24px; }
+    .causes-section-three .cause-block-three .image img { width: 520px; height: 390px; }
+    .causes-section-three .cause-block-three .inner-box { padding-left: 140px; }
+    .causes-section-three .cause-block-three .content-wrapper { max-width: 340px; }
+}
+@media (max-width: 767px) {
+    .causes-section-three .cause-carousel-wrapper { padding: 48px 0; padding-right: 0; }
+    .causes-section-three .cause-carousel-wrapper:before { display: none; }
+    .causes-section-three .cause-block-three .inner-box { padding-left: 0; }
+    .causes-section-three .cause-block-three .image img {
+        width: min(100%, 450px);
+        height: 338px;
+        margin: 0 auto;
+        display: block;
+    }
+    .causes-section-three .cause-block-three .content-wrapper {
+        position: relative;
+        top: auto;
+        left: auto;
+        max-width: 370px;
+        margin: -24px auto 0;
+        z-index: 1;
+    }
+    .causes-section-three .cause-block-three .content { padding: 32px 16px 24px; }
+    .causes-section-three .owl-dot-style-one .owl-dots {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        padding-top: 22px;
+    }
+    .causes-section-three .owl-dot-style-one .owl-dots .owl-dot { margin: 0; }
+}
+
+/* Three quiet vertical photo columns for Moments at VHCS. */
+.vhcs-gallery-section { overflow: hidden; }
+.vhcs-gallery-section .sec-title { margin-bottom: 34px; }
+.vhcs-photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    height: 700px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
+}
+.vhcs-photo-column { min-width: 0; overflow: hidden; }
+.vhcs-photo-track { display: flex; flex-direction: column; will-change: transform; }
+.vhcs-photo-group { display: grid; grid-template-columns: 1fr; gap: 18px; padding-bottom: 18px; }
+.vhcs-photo-card { margin: 0; overflow: hidden; border-radius: 4px; background: #f4f2ed; aspect-ratio: 4 / 3; }
+.vhcs-photo-card img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.vhcs-photo-up .vhcs-photo-track { animation: vhcs-photo-scroll-up 22s linear infinite; }
+.vhcs-photo-down .vhcs-photo-track { animation: vhcs-photo-scroll-down 22s linear infinite; }
+.vhcs-photo-third .vhcs-photo-track { animation-duration: 22s; animation-delay: -11s; }
+.vhcs-photo-column:hover .vhcs-photo-track { animation-play-state: paused; }
+@keyframes vhcs-photo-scroll-up { to { transform: translateY(-50%); } }
+@keyframes vhcs-photo-scroll-down { from { transform: translateY(-50%); } to { transform: translateY(0); } }
+@media (max-width: 991px) {
+    .vhcs-photo-gallery { height: 540px; gap: 14px; }
+    .vhcs-photo-group { gap: 14px; padding-bottom: 14px; }
+}
+@media (max-width: 767px) {
+    .vhcs-gallery-section { padding: 60px 0 55px; }
+    .vhcs-gallery-section .sec-title { margin-bottom: 26px; }
+    .vhcs-photo-gallery { height: 400px; gap: 10px; }
+    .vhcs-photo-group { gap: 10px; padding-bottom: 10px; }
+    .vhcs-photo-card { aspect-ratio: 3 / 4; }
+}
+@media (max-width: 380px) {
+    .vhcs-photo-gallery { height: 350px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .vhcs-photo-track { animation: none !important; transform: none !important; }
+}
 
